@@ -37,7 +37,7 @@ public class PostController {
     //
     @PutMapping("/api/posts/{id}")
     public Long updateBoard(@PathVariable Long id, @RequestBody PostRequestDto postRequestDto) {
-        return postService.update(id, postRequestDto);
+        return postService.update_post(id, postRequestDto);
     }
     //삭제
     @DeleteMapping("/api/Posts/{id}")

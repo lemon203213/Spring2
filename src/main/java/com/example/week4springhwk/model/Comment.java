@@ -1,11 +1,16 @@
 package com.example.week4springhwk.model;
 
 import com.example.week4springhwk.dto.CommentRequestDto;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+
+@Setter
+@Getter
+@NoArgsConstructor
+@Entity
 
 public class Comment extends Timestamped{
     @Id
@@ -19,19 +24,19 @@ public class Comment extends Timestamped{
     private String comment;
 
     @Column(nullable = false)
-    private long postid;
+    private long postId;
 
 
-    public Comment(CommentRequestDto requestDto){
-        this.nickname = requestDto.getNickname();
-        this.comment = requestDto.getComment();
-        this.postid = requestDto.getPostid();
+    public Comment(CommentRequestDto commentrequestDto){
+        this.nickname = commentrequestDto.getNickname();
+        this.comment = commentrequestDto.getComment();
+        this.postId = commentrequestDto.getPostId();
     }
 
-    public void update(CommentRequestDto requestDto){
-        this.nickname = requestDto.getNickname();
-        this.comment = requestDto.getComment();
-        this.postid = requestDto.getPostid();
+    public void updateComment(CommentRequestDto commentrequestDto){
+        this.nickname = commentrequestDto.getNickname();
+        this.comment = commentrequestDto.getComment();
+        this.postId = commentrequestDto.getPostId();
     }
 
 }

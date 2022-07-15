@@ -16,11 +16,11 @@ public class CommentService {
 
 
     @Transactional
-    public Long update(Long id, CommentRequestDto requestDto) {
+    public Long updateComment(Long id, CommentRequestDto commentRequestDto) {
         Comment comment = commentRepository.findById(id).orElseThrow(
                 () -> new IllegalArgumentException("comment의 아이디가 존재하지 않습니다.")
         );
-        comment.update(requestDto);
+        comment.updateComment(commentRequestDto);
         return comment.getId();
     }
 

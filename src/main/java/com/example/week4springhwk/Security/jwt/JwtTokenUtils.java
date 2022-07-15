@@ -3,7 +3,7 @@ package com.example.week4springhwk.Security.jwt;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.example.week4springhwk.Security.UserDetailsImpl;
-import com.sun.org.apache.xml.internal.security.algorithms.Algorithm;
+
 
 import java.util.Date;
 

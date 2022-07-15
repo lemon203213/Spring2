@@ -29,7 +29,7 @@ public class CommentController {
 
     @PutMapping("/api/comments/{id}")
     public Long updateComment(@PathVariable Long id, @RequestBody CommentRequestDto commentRequestDto) {
-        return commentService.update(id, commentRequestDto);
+        return commentService.updateComment(id, commentRequestDto);
     }
 
     @DeleteMapping("/api/comments/{id}")
