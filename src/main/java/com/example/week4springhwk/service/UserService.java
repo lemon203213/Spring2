@@ -2,6 +2,7 @@ package com.example.week4springhwk.service;
 
 import com.example.week4springhwk.dto.SignupRequestDto;
 import com.example.week4springhwk.model.User;
+import com.example.week4springhwk.model.UserRoleEnum;
 import com.example.week4springhwk.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;

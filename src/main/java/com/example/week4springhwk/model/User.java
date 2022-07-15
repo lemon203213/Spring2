@@ -20,14 +20,9 @@ public class User {
     @Column(nullable = false)
     private String password;
 
-    @Column(nullable = false)
-    @Enumerated(value = EnumType.STRING) //자바 내에서는 Enum, DB전달할 때는 String
-    private UserRoleEnum role;
-
-    public User(String nickname, String password, UserRoleEnum role) {
+    public User(String nickname, String password) {
         this.nickname = nickname;
         this.password = password;
-        this.role = role;
     }
 }
 

@@ -23,4 +23,12 @@ public class SignupRequestDto {
 
     @NotBlank(message = "비밀번호 확인해 주세요")
     private String passwordCheck;
+
+    private boolean admin = false;
+    private String adminToken = "";
+    public static class test extends SignupRequestDto {
+        public test(String username, String password, String passwordChk, boolean b, String s) {
+            super();
+        }
+    }
 }
